@@ -1,0 +1,79 @@
+---
+title: 'Wireless Standard QuickBooks Integration Settings'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="inner">
+		<div class="section">
+			<div class="form-group form-group_inline">
+				<label for="send-alert" class="label form-group__label">Enable QuickBooks</label>
+				{{mixins.switcher({
+					attrs: 'id="send-alert"',
+					classList: 'form-group__switcher'
+				})}}
+			</div>
+			<div class="form-group">
+				<button class="btn btn_gray">Conntect to QuickBooks</button>
+			</div>
+		</div>
+		<div class="section">
+			<div class="form-group">
+				<div class="form-group__row">
+					<div class="form-group__col">
+						<div class="label">Chart of Accounts imported on:</div>
+					</div>
+					<div class="form-group__col">
+						<div class="value">12/14/2018 11:14AM by testuser</div>
+					</div>
+					<div class="form-group__col">
+						<div class="check">
+							<div class="check__inner">
+								Click this button to import chart of accounts.
+							</div>
+						</div>
+					</div>
+					<div class="form-group__col">
+						<button class="btn btn_gray">Import Chart of Accounts</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="form-group">
+				<div class="form-group__field">
+					<div class="form-group__description">Receipt Number from where sync will start:</div>
+					<div class="form-group__control form-group__control_inline">
+						<input type="text" class="input" placeholder="Receipt Number">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="grid">
+				<div class="grid__header">
+					<div class="grid__column">Categories</div>
+					<div class="grid__column">Chart of Accounts</div>
+				</div>
+				<div class="grid__body">
+					{% for item in [
+						'Cell phone',
+						'Sim card',
+						'Accessory'
+					] %}
+						<div class="grid__row">
+							<div class="grid__column">{{item}}</div>
+							<div class="grid__column">
+								<select class="select">
+									<option value="Income Cell Phones">Income Cell Phones</option>
+									<option value="Income Sim Card">Income Sim Card</option>
+									<option value="Income Accessory">Income Accessory</option>
+								</select>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

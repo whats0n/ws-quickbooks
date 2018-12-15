@@ -1,0 +1,56 @@
+.header
+	position: relative
+	flex-shrink: 0
+	color: $white
+	background: $blue
+	text-align: center
+	+metro
+		background: $metroPrimary
+	+boost
+		background: $elevateSecondary
+	&__close
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		+vertical	
+		width: 60px
+		color: $white
+		background: none
+		cursor: pointer
+		transition: background 0.25s, box-shadow 0.25s
+		+hover 
+			background: darken($blue, 10%)
+		+hover('metro')
+			background: $metroPrimary
+		+hover('boost')
+			background: $elevateSecondary
+		&:active
+			background: darken($blue, 10%)
+			box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
+			+metro
+				background: $metroPrimary
+			+boost
+				background: $elevateSecondary
+		&-icon
+			display: inline-block
+			vertical-align: middle
+			fill: currentColor
+			font-size: 20px		
+	&__inner 
+		padding: 0 60px
+		height: 60px
+		+vertical
+		+r(500)
+			padding: 10px 60px
+			height: auto
+			min-height: 60px
+	&__title
+		display: inline-block
+		vertical-align: middle
+		+f(18px, 500, 1.2)
+		text-transform: uppercase
+		+sm
+			font-size: 16px
+		span 
+			text-transform: none

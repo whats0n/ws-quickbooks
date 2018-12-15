@@ -1,0 +1,20 @@
+{% macro icon(i, class) %}
+	<svg class="icon icon-{{i}} {{class}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro checkbox(props) %}
+	<label class="checkbox">
+		<input type="checkbox" class="checkbox__input">
+		<span class="checkbox__icon">
+			{{icon('check', 'checkbox__icon-in')}}
+		</span>
+		<span class="label checkbox__text">{{props.text}}</span>
+	</label>
+{% endmacro %}
+
+{% macro switcher(props) %}
+	<label class="awesome-switcher {{props.classList}}">
+		<input {{props.attrs | safe}} type="checkbox" class="awesome-switcher__input">
+		<span class="awesome-switcher__control"></span>
+	</label>
+{% endmacro %}

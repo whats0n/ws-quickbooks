@@ -1,0 +1,23 @@
+---
+title: 'Wireless Standard QuickBooks sync'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<div class="inner">
+		<div class="section text-center">
+			<button class="btn btn_primary">Sync Now</button>
+		</div>
+		<div class="section">
+			<p>Last sync done on <strong>14/12/2018 11:14AM</strong> by testuse</p>
+		</div>
+		<div class="section">
+			<p>List of errors in last sync:</p>
+			<ul class="errors">
+				{% for item in range(0,5) %}
+					<li class="errors__item">Error {{loop.index}}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+{% endblock %}

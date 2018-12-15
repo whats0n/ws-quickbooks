@@ -1,0 +1,5 @@
+ProjectTitle: ws-quickbooks
+
+PageList:
+- file: sync.html
+- file: settings.html

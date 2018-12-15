@@ -1,0 +1,34 @@
+.form-group
+	&:not(:last-child)
+		margin-bottom: 20px
+	&_inline
+		font-size: 0
+		.form-group
+			&__label,
+			&__switcher
+				display: inline-block
+				vertical-align: top
+			&__label
+				padding: 5px 16px 5px 0
+				margin: 0
+	&__label
+		margin-bottom: 8px
+	&__description,
+	&__control_inline
+		display: inline-block
+		vertical-align: top
+	&__control_inline
+		width: 180px
+	&__description
+		padding: 8px 16px 8px 0
+		+f(18px, 400, 24px)
+	&__row
+		margin: -5px
+		font-size: 0
+	&__col
+		display: inline-block
+		vertical-align: top
+		padding: 5px
+		width: 50%
+		+r(580)
+			width: 100%

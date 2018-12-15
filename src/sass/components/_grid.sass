@@ -1,0 +1,28 @@
+.grid
+	border: 1px solid #ccc
+	&__header,
+	&__row
+		display: flex
+		+r(500)
+			flex-direction: column
+	&__header
+		color: lighten($darkGray, 20%)
+		background: #ccc
+		+f(18px, 700, 20px)
+		border-bottom: 1px solid #ccc
+		+r(500)
+			display: none
+	&__row
+		align-items: center
+		+r(500)
+			align-items: inherit
+			padding: 15px
+		&:not(:last-child)
+			border-bottom: 1px solid #ccc
+	&__column
+		padding: 10px 
+		flex: 1 1 50%
+		font-size: 16px
+		+r(500)
+			padding: 5px
+			flex-basis: 100%

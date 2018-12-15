@@ -1,0 +1,71 @@
+.btn 
+	position: relative
+	overflow: hidden
+	display: inline-block
+	vertical-align: top
+	padding: 0 15px
+	min-width: 120px
+	border: none
+	outline: none
+	color: $white
+	background: $blue
+	font-family: inherit
+	+f(18px, 300, 50px)
+	text-align: center
+	text-decoration: none
+	cursor: pointer
+	transition: opacity .175s, background .175s, box-shadow .175s
+	+metro
+		background: $metroSecondary
+	+boost
+		background: $elevatePrimary
+	&:active
+		color: $white
+		background: darken($blue, 10%)
+		box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
+		+metro
+			background: darken($metroSecondary, 10%)
+		+boost
+			background: darken($elevatePrimary, 10%)
+	&:disabled,
+	&.is-disabled
+		opacity: 0.7
+		cursor: not-allowed
+	&_gray
+		background: #bec1cb
+		+metro
+			background: #bec1cb
+		+boost
+			background: #bec1cb
+		&:active
+			background: darken(#bec1cb, 10%)
+			+boost
+				background: darken(#bec1cb, 10%)
+			+metro
+				background: darken(#bec1cb, 10%)
+	&_red
+		background: $red
+		+metro
+			background: $red
+		&:active
+			background: darken($red, 10%)
+			+metro
+				background: darken($red, 10%)
+	&_wide
+		width: 100%
+	&_plus
+		width: 40px
+		min-width: auto
+		height: 40px
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 18px
+			height: 1px
+			background: currentColor
+			transform: translate(-50%,-50%)
+		&:after
+			transform: translate(-50%,-50%) rotate(90deg)
