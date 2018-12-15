@@ -14,9 +14,11 @@
   <body>
 
     <!-- BEGIN content -->
-    {% include "partials/_header.html" %}
-    <div class="main">
-      {% block content %}{% endblock %}
+    <div id="root">
+      {% include "partials/_header.html" %}
+      <div class="main">
+        {% block content %}{% endblock %}
+      </div>
     </div>
     <!-- END content -->
 
