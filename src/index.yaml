@@ -3,3 +3,7 @@ ProjectTitle: ws-quickbooks
 PageList:
 - file: sync.html
 - file: settings.html
+- file: sync-metro.html
+- file: settings-metro.html
+- file: sync-boost.html
+- file: settings-boost.html

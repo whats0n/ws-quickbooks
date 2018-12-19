@@ -1,0 +1,19 @@
+<div class="inner">
+	<div class="section text-center">
+		<button class="btn-sync">
+			<img src="img/sync.svg" alt="B2BSoft" class="btn-sync__icon">
+			<span class="btn-sync__text">Sync Now</span>
+		</button>
+	</div>
+	<div class="section">
+		<p>Last sync done on <strong>14/12/2018 11:14AM</strong> by testuse</p>
+	</div>
+	<div class="section">
+		<p>List of errors in last sync:</p>
+		<ul class="errors">
+			{% for item in range(0,5) %}
+				<li class="errors__item">Error {{loop.index}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
