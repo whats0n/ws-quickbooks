@@ -1,0 +1,32 @@
+.alert
+  position: relative
+  padding: 15px 50px 15px 15px
+  border: 1px solid #d6e9c6
+  border-radius: 4px
+  color: #3c763d
+  background-color: #dff0d8
+  +f(16px, 400, 1.4)
+  &:not(:first-child)
+    margin-top: 20px
+  &_error
+    border-color: #ebccd1
+    color: #a94442
+    background-color: #f2dede
+  &__close
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 50px
+    opacity: 0.2
+    color: inherit
+    background: none
+    +vertical
+    transition: opacity 0.3s
+    +hover
+      color: inherit
+      opacity: 1
+  &__icon
+    vertical-align: middle
+    fill: currentColor
+    font-size: 14px

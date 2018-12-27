@@ -3,6 +3,7 @@
 	&__header,
 	&__row
 		display: flex
+		width: 100%
 		+r(500)
 			flex-direction: column
 	&__header
@@ -14,15 +15,22 @@
 			display: none
 	&__row
 		align-items: center
+		flex-wrap: wrap
 		+r(500)
 			align-items: inherit
 			padding: 15px
 		&:not(:last-child)
 			border-bottom: 1px solid #ccc
 	&__column
+		flex: 1 1 33.33%
 		padding: 10px 
-		flex: 1 1 50%
+		width: 33.33%
 		font-size: 16px
 		+r(500)
-			padding: 5px
 			flex-basis: 100%
+			padding: 5px
+			width: 100%
+		&_wide
+			padding-bottom: 0
+			flex-basis: 100%
+			width: 100%
