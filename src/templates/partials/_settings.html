@@ -12,14 +12,16 @@
 		<div class="title-lg">Step 2. Connect to QuickBooks to authorize your account.</div>
 		<div class="form-group">
 			<button class="btn btn_gray">Connect</button>
+			{{mixins.icon('checked', 'form-group__checked')}}
 		</div>
 	</div>
 	<div class="section">
 		<div class="title-lg">Step 3. Import chart of accounts from QuickBooks.</div>
 		<div class="form-group form-group_inline">
 			<div class="form-group__row">
-				<div class="form-group__col">
+				<div class="form-group__col form-group__col_wide">
 					<button class="btn btn_gray">Import Chart of Accounts</button>
+					{{mixins.icon('checked', 'form-group__checked')}}
 				</div>
 			</div>
 			<div class="form-group__row">
@@ -79,6 +81,11 @@
 								<option value="Income Sim Card">Income Sim Card</option>
 								<option value="Income Accessory">Income Accessory</option>
 							</select>
+							{% if loop.first %}
+								<div class="grid__btn grid__btn_right">
+									<button class="btn btn_primary btn_sm">Apply to all categories</button>
+								</div>
+							{% endif %}
 						</div>
 					</div>
 				{% endfor %}
