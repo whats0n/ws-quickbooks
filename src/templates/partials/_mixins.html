@@ -3,12 +3,18 @@
 {% endmacro %}
 
 {% macro checkbox(props) %}
-	<label class="checkbox">
+	<label class="checkbox {{props.class}}">
 		<input type="checkbox" class="checkbox__input">
-		<span class="checkbox__icon">
-			{{icon('check', 'checkbox__icon-in')}}
-		</span>
-		<span class="label checkbox__text">{{props.text}}</span>
+		{% if props.icon %}
+	    {{icon(props.icon, 'checkbox__icon-custom')}}
+		{% else %}
+			<span class="checkbox__icon">
+				{{icon('check', 'checkbox__icon-in')}}
+			</span>
+		{% endif %}
+		{% if props.text %}
+			<span class="label checkbox__text">{{props.text}}</span>
+		{% endif %}
 	</label>
 {% endmacro %}
 

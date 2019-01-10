@@ -1,0 +1,106 @@
+<div class="inner">
+  <div class="section">
+    <div class="title-lg">Step 1. Enable QuickBooks integration.</div>
+    <div class="form-group form-group_inline">
+      {{mixins.switcher({
+        attrs: 'id="send-alert"',
+        classList: 'form-group__switcher'
+      })}}
+    </div>
+  </div>
+  <div class="section">
+    <div class="title-lg">Step 2. Connect to QuickBooks to authorize your account.</div>
+    <div class="form-group">
+      <button class="btn">Connect</button>
+      {{mixins.checkbox({ icon: 'checked', class: 'form-group__checked' })}}
+    </div>
+  </div>
+  <div class="section">
+    <div class="title-lg">Step 3. Import chart of accounts from QuickBooks.</div>
+    <div class="form-group form-group_inline">
+      <div class="form-group__row">
+        <div class="form-group__col form-group__col_wide">
+          <button class="btn">Import Chart of Accounts</button>
+          {{mixins.checkbox({ icon: 'checked', class: 'form-group__checked' })}}
+        </div>
+      </div>
+      <div class="form-group__row">
+        <div class="form-group__col form-group__col_wide">
+          <div class="alert alert_gray">
+            <p>
+              <strong>Chart of Accounts imported on:</strong> 12/14/2018 11:14AM by testuser
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title-lg">Step 4. Enter the receipt number from POS that you want the sync to start with</div>
+    <div class="form-group">
+      <div class="form-group__field">
+        <div class="form-group__control">
+          <input type="text" class="input" placeholder="Receipt Number">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title-lg">Step 5. Map product categories from POS to QB accounts.</div>
+    <div class="grid">
+      <div class="grid__header">
+        <div class="grid__column">Income Account</div>
+        <div class="grid__column">COGS Account</div>
+        <div class="grid__column">Asset Account</div>
+      </div>
+      <div class="grid__body">
+        {% for item in [
+          'Cell phone',
+          'Sim card',
+          'Accessory'
+        ] %}
+          <div class="grid__row">
+            <div class="grid__column grid__column_wide">{{item}}</div>
+            <div class="grid__column">
+              <select class="select">
+                <option value="Income Cell Phones">Income Cell Phones</option>
+                <option value="Income Sim Card">Income Sim Card</option>
+                <option value="Income Accessory">Income Accessory</option>
+              </select>
+            </div>
+            <div class="grid__column">
+              <select class="select">
+                <option value="Income Cell Phones">Income Cell Phones</option>
+                <option value="Income Sim Card">Income Sim Card</option>
+                <option value="Income Accessory">Income Accessory</option>
+              </select>
+            </div>
+            <div class="grid__column">
+              <select class="select">
+                <option value="Income Cell Phones">Income Cell Phones</option>
+                <option value="Income Sim Card">Income Sim Card</option>
+                <option value="Income Accessory">Income Accessory</option>
+              </select>
+              {% if loop.first %}
+                <div class="grid__btn grid__btn_right">
+                  <button class="btn btn_primary btn_sm">Apply to all categories</button>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="alert">
+      <button class="alert__close">
+        {{mixins.icon('close', 'alert__icon')}}
+      </button>
+      <p>
+        <strong>Success!</strong> Settings are successfully saved.
+      </p>
+    </div>
+  </div>
+  <div class="section text-center">
+    <button class="btn btn_primary">Save</button>
+  </div>
+</div>
