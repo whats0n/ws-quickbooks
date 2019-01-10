@@ -6,6 +6,21 @@
 		width: 100%
 		+r(500)
 			flex-direction: column
+		&_out
+			position: relative
+			padding-left: 60px
+			+r(500)
+				padding-left: 50px !important
+			.grid__row
+				+r(500)
+					padding: 0
+	&__checkbox
+		position: absolute
+		top: 0
+		left: 10px
+		width: 40px
+		font-size: 0
+		text-align: center
 	&__header
 		color: lighten($darkGray, 20%)
 		background: #ccc
@@ -13,6 +28,8 @@
 		border-bottom: 1px solid #ccc
 		+r(500)
 			display: none
+		.grid__checkbox
+			top: 7px
 	&__row
 		align-items: top
 		flex-wrap: wrap
@@ -21,6 +38,10 @@
 			padding: 15px
 		&:not(:last-child)
 			border-bottom: 1px solid #ccc
+		.grid__checkbox
+			top: 42px
+			+r(500)
+				top: 52px
 	&__column
 		flex: 1 1 33.33%
 		padding: 10px 

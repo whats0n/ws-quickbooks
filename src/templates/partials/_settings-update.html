@@ -48,10 +48,15 @@
   <div class="section">
     <div class="title-lg">Step 5. Map product categories from POS to QB accounts.</div>
     <div class="grid">
-      <div class="grid__header">
-        <div class="grid__column">Income Account</div>
-        <div class="grid__column">COGS Account</div>
-        <div class="grid__column">Asset Account</div>
+      <div class="grid__header grid__header_out">
+        <div class="grid__checkbox">
+          {{mixins.checkbox({ icon: 'checked-all', class: 'checkbox_sm' })}}
+        </div>
+        <div class="grid__row">
+          <div class="grid__column">Income Account</div>
+          <div class="grid__column">COGS Account</div>
+          <div class="grid__column">Asset Account</div>
+        </div>
       </div>
       <div class="grid__body">
         {% for item in [
@@ -59,33 +64,38 @@
           'Sim card',
           'Accessory'
         ] %}
-          <div class="grid__row">
-            <div class="grid__column grid__column_wide">{{item}}</div>
-            <div class="grid__column">
-              <select class="select">
-                <option value="Income Cell Phones">Income Cell Phones</option>
-                <option value="Income Sim Card">Income Sim Card</option>
-                <option value="Income Accessory">Income Accessory</option>
-              </select>
+          <div class="grid__row grid__row_out">
+            <div class="grid__checkbox">
+              {{mixins.checkbox({ icon: 'checked' })}}
             </div>
-            <div class="grid__column">
-              <select class="select">
-                <option value="Income Cell Phones">Income Cell Phones</option>
-                <option value="Income Sim Card">Income Sim Card</option>
-                <option value="Income Accessory">Income Accessory</option>
-              </select>
-            </div>
-            <div class="grid__column">
-              <select class="select">
-                <option value="Income Cell Phones">Income Cell Phones</option>
-                <option value="Income Sim Card">Income Sim Card</option>
-                <option value="Income Accessory">Income Accessory</option>
-              </select>
-              {% if loop.first %}
-                <div class="grid__btn grid__btn_right">
-                  <button class="btn btn_primary btn_sm">Apply to all categories</button>
-                </div>
-              {% endif %}
+            <div class="grid__row">
+              <div class="grid__column grid__column_wide">{{item}}</div>
+              <div class="grid__column">
+                <select class="select">
+                  <option value="Income Cell Phones">Income Cell Phones</option>
+                  <option value="Income Sim Card">Income Sim Card</option>
+                  <option value="Income Accessory">Income Accessory</option>
+                </select>
+              </div>
+              <div class="grid__column">
+                <select class="select">
+                  <option value="Income Cell Phones">Income Cell Phones</option>
+                  <option value="Income Sim Card">Income Sim Card</option>
+                  <option value="Income Accessory">Income Accessory</option>
+                </select>
+              </div>
+              <div class="grid__column">
+                <select class="select">
+                  <option value="Income Cell Phones">Income Cell Phones</option>
+                  <option value="Income Sim Card">Income Sim Card</option>
+                  <option value="Income Accessory">Income Accessory</option>
+                </select>
+                {% if loop.first %}
+                  <div class="grid__btn grid__btn_right">
+                    <button class="btn btn_primary btn_sm">Apply to all categories</button>
+                  </div>
+                {% endif %}
+              </div>
             </div>
           </div>
         {% endfor %}
