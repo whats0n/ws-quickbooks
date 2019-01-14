@@ -2,7 +2,6 @@
 	border: 1px solid #ccc
 	&__header,
 	&__row
-		display: flex
 		width: 100%
 		+r(500)
 			flex-direction: column
@@ -22,6 +21,7 @@
 		font-size: 0
 		text-align: center
 	&__header
+		display: flex
 		color: lighten($darkGray, 20%)
 		background: #ccc
 		+f(18px, 700, 20px)
@@ -31,8 +31,6 @@
 		.grid__checkbox
 			top: 7px
 	&__row
-		align-items: top
-		flex-wrap: wrap
 		+r(500)
 			align-items: inherit
 			padding: 15px
@@ -42,6 +40,11 @@
 			top: 42px
 			+r(500)
 				top: 52px
+	&__items
+		display: flex
+		align-items: top
+		flex-wrap: wrap
+		width: 100%
 	&__column
 		flex: 1 1 33.33%
 		padding: 10px 
@@ -55,6 +58,9 @@
 			padding-bottom: 0
 			flex-basis: 100%
 			width: 100%
+	&__label
+		padding: 10px 10px 0
+		font-size: 16px
 	&__btn
 		&:not(:first-child)
 			margin-top: 12px

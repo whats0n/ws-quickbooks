@@ -60,32 +60,34 @@
 					'Accessory'
 				] %}
 					<div class="grid__row">
-						<div class="grid__column grid__column_wide">{{item}}</div>
-						<div class="grid__column">
-							<select class="select">
-								<option value="Income Cell Phones">Income Cell Phones</option>
-								<option value="Income Sim Card">Income Sim Card</option>
-								<option value="Income Accessory">Income Accessory</option>
-							</select>
-						</div>
-						<div class="grid__column">
-							<select class="select">
-								<option value="Income Cell Phones">Income Cell Phones</option>
-								<option value="Income Sim Card">Income Sim Card</option>
-								<option value="Income Accessory">Income Accessory</option>
-							</select>
-						</div>
-						<div class="grid__column">
-							<select class="select">
-								<option value="Income Cell Phones">Income Cell Phones</option>
-								<option value="Income Sim Card">Income Sim Card</option>
-								<option value="Income Accessory">Income Accessory</option>
-							</select>
-							{% if loop.first %}
-								<div class="grid__btn grid__btn_right">
-									<button class="btn btn_primary btn_sm">Apply to all categories</button>
-								</div>
-							{% endif %}
+						<div class="grid__label">{{item}}</div>
+						<div class="grid__items">
+							<div class="grid__column">
+								<select class="select">
+									<option value="Income Cell Phones">Income Cell Phones</option>
+									<option value="Income Sim Card">Income Sim Card</option>
+									<option value="Income Accessory">Income Accessory</option>
+								</select>
+							</div>
+							<div class="grid__column">
+								<select class="select">
+									<option value="Income Cell Phones">Income Cell Phones</option>
+									<option value="Income Sim Card">Income Sim Card</option>
+									<option value="Income Accessory">Income Accessory</option>
+								</select>
+							</div>
+							<div class="grid__column">
+								<select class="select">
+									<option value="Income Cell Phones">Income Cell Phones</option>
+									<option value="Income Sim Card">Income Sim Card</option>
+									<option value="Income Accessory">Income Accessory</option>
+								</select>
+								{% if loop.first %}
+									<div class="grid__btn grid__btn_right">
+										<button class="btn btn_primary btn_sm">Apply to all categories</button>
+									</div>
+								{% endif %}
+							</div>
 						</div>
 					</div>
 				{% endfor %}
