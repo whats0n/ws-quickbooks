@@ -4,6 +4,7 @@
   vertical-align: top
   font-size: 0
   +nosel
+  cursor: pointer
   &_sm 
     .checkbox
       &__icon-custom
@@ -16,9 +17,7 @@
     &:disabled ~ .checkbox
       &__icon-custom
         opacity: 0.5
-        cursor: not-allowed
   &__icon-custom
     fill: #909799
     font-size: 34px
-    cursor: pointer
     transition: fill 0.25s
