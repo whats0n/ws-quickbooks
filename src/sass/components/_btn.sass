@@ -78,32 +78,24 @@
 	width: 170px
 	background: none
 	font-size: 0
-	&.is-active
+	user-select: none
+	&:disabled 
+		cursor: not-allowed
 		.btn-sync
-			&__inactive
+			&__active
 				display: none
-			&__active 
-				display: block
-		&:active
-			.btn-sync
-				&__active 
-					color: $white
-					background: darken($blue, 10%)
-					box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
-					+metro
-						background: darken($metroSecondary, 10%)
-					+boost
-						background: darken($elevatePrimary, 10%)
+			&__inactive 
+				display: block	
 	&:active
 		.btn-sync
-			&__inactive 
-				color: darken(#5d6366, 20%)
-				background: darken(#bfc0c3, 10%)
+			&__active 
+				color: $white
+				background: darken($blue, 10%)
 				box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
-				+boost
-					background: darken(#bfc0c3, 10%)
 				+metro
-					background: darken(#bfc0c3, 10%)
+					background: darken($metroSecondary, 10%)
+				+boost
+					background: darken($elevatePrimary, 10%)
 	&__icon
 		display: block
 		margin-bottom: 10px
@@ -117,7 +109,7 @@
 		text-transform: uppercase
 		transition: color .175s, background .175s, box-shadow .175s
 	&__active
-		display: none
+		display: block
 		color: $white
 		background: $blue
 		+metro
@@ -125,4 +117,4 @@
 		+boost
 			background: $elevatePrimary
 	&__inactive
-		display: block
+		display: none
