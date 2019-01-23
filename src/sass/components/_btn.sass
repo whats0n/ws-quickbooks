@@ -3,14 +3,14 @@
 	overflow: hidden
 	display: inline-block
 	vertical-align: top
-	padding: 0 15px
+	padding: 15px
 	min-width: 120px
 	border: none
 	outline: none
 	color: $white
 	background: $blue
 	font-family: inherit
-	+f(18px, 300, 50px)
+	+f(18px, 300, 20px)
 	text-align: center
 	text-decoration: none
 	cursor: pointer
@@ -32,7 +32,9 @@
 		opacity: 0.7
 		cursor: not-allowed
 	&_sm
-		line-height: 40px
+		padding: 12px 15px
+		font-size: 14px
+		line-height: 16px
 	&_gray
 		background: #bec1cb
 		+metro
@@ -76,12 +78,51 @@
 	width: 170px
 	background: none
 	font-size: 0
+	&.is-active
+		.btn-sync
+			&__inactive
+				display: none
+			&__active 
+				display: block
+		&:active
+			.btn-sync
+				&__active 
+					color: $white
+					background: darken($blue, 10%)
+					box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
+					+metro
+						background: darken($metroSecondary, 10%)
+					+boost
+						background: darken($elevatePrimary, 10%)
+	&:active
+		.btn-sync
+			&__inactive 
+				color: darken(#5d6366, 20%)
+				background: darken(#bfc0c3, 10%)
+				box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
+				+boost
+					background: darken(#bfc0c3, 10%)
+				+metro
+					background: darken(#bfc0c3, 10%)
 	&__icon
 		display: block
 		margin-bottom: 10px
 		width: 100%
 	&__text
-		color: #666
+		padding: 10px
+		color: #5d6366
+		background: #bfc0c3
 		font-size: 16px
 		font-weight: 500
 		text-transform: uppercase
+		transition: color .175s, background .175s, box-shadow .175s
+	&__active
+		display: none
+		color: $white
+		background: $blue
+		+metro
+			background: $metroSecondary
+		+boost
+			background: $elevatePrimary
+	&__inactive
+		display: block

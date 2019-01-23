@@ -1,9 +1,18 @@
 <div class="inner">
 	<div class="section text-center">
-		<button class="btn-sync">
-			<img src="img/sync.svg" alt="B2BSoft" class="btn-sync__icon">
-			<span class="btn-sync__text">Sync Now</span>
-		</button>
+		{% if syncCompleted %}
+			<button class="btn-sync">
+				<img src="img/sync.svg" alt="B2BSoft" class="btn-sync__icon">
+				<span class="btn-sync__text btn-sync__active">Sync Now</span>
+				<span class="btn-sync__text btn-sync__inactive">Sync Completed</span>
+			</button>
+		{% else %}
+			<button class="btn-sync is-active">
+				<img src="img/sync.svg" alt="B2BSoft" class="btn-sync__icon">
+				<span class="btn-sync__text btn-sync__active">Sync Now</span>
+				<span class="btn-sync__text btn-sync__inactive">Sync Completed</span>
+			</button>
+		{% endif %}
 	</div>
 	<div class="section">
 		<p>Last sync done on <strong>14/12/2018 11:14AM</strong> by testuse</p>

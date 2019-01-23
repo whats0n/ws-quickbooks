@@ -2,6 +2,7 @@ ProjectTitle: ws-quickbooks
 
 PageList:
 - file: sync.html
+- file: sync-completed.html
 - file: settings.html
 - file: settings-update.html
 
