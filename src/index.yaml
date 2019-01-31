@@ -5,6 +5,7 @@ PageList:
 - file: sync-completed.html
 - file: settings.html
 - file: settings-update.html
+- file: settings-update-connected.html
 
 - file: sync-metro.html
 - file: settings-metro.html

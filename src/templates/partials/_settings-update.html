@@ -11,7 +11,11 @@
   <div class="section">
     <div class="title-lg">Step 2. Connect to QuickBooks to authorize your account.</div>
     <div class="form-group">
-      <button class="btn">Connect</button>
+      {% if connectedStatus %}
+        <span class="form-group__status">Connected to Sandbox Company_US_1</span>
+      {% else %}
+        <button class="btn">Connect</button>
+      {% endif %}
       {{mixins.checkbox({ icon: 'checked', class: 'form-group__checked' })}}
     </div>
   </div>
