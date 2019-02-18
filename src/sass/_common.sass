@@ -66,13 +66,22 @@ svg
 		margin-bottom: 16px
 
 .btn-group
+	display: flex
+	justify-content: space-between
 	font-size: 0
+	+r(480)
+		display: block
 	.btn
-		+r(420)
+		+r(480)
 			width: 100%
-			max-width: 200px
+			max-width: 280px
 		&:not(:last-child)
 			margin-right: 10px
-			+r(420)
+			+r(480)
 				margin-right: 0
 				margin-bottom: 10px
+	&__left,
+	&__right
+		flex: 0 0 auto
+	&__left
+		padding-bottom: 10px
