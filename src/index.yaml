@@ -6,6 +6,7 @@ PageList:
 - file: settings.html
 - file: settings-update.html
 - file: settings-update-connected.html
+- file: eula.html
 
 - file: sync-metro.html
 - file: settings-metro.html
