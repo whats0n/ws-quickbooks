@@ -26,6 +26,7 @@ body,
 	max-width: 840px
 
 .section
+	+clr
 	&:not(:last-child)
 		margin-bottom: 40px
 	p
@@ -35,6 +36,8 @@ body,
 			margin-bottom: 0.5em
 	&__label
 		margin-bottom: 10px
+	&__cancel
+		float: right
 
 #root
 	display: flex
@@ -71,7 +74,8 @@ svg
 	font-size: 0
 	+r(480)
 		display: block
-	.btn
+	.btn,
+	form
 		+r(480)
 			width: 100%
 			max-width: 280px
@@ -80,6 +84,9 @@ svg
 			+r(480)
 				margin-right: 0
 				margin-bottom: 10px
+	form
+		display: inline-block
+		vertical-align: top
 	&__left,
 	&__right
 		flex: 0 0 auto
